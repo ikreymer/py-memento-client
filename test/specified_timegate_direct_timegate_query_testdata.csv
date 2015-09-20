@@ -1,0 +1,6 @@
+"Input URI-R", "Accept-Datetime", "Input URI-G", "Expected URI-M"
+"http://www.lanl.gov","Wed, 19 Mar 2003 23:59:59 GMT","http://www.web.archive.org/web/","http://www.web.archive.org/web/20030320195439/http://www.lanl.gov/"
+"http://www.cnn.com","Tue, 28 Jul 1998 17:18:49 GMT","http://web.archive.org/web/","http://web.archive.org/web/20000620180259/http://cnn.com/"
+"http://www.huffingtonpost.com","Tue, 14 Jan 2003 10:31:44 GMT","http://web.archive.org/web/","http://web.archive.org/web/20050422005938/http://www.huffingtonpost.com/"
+"http://slacvm.slac.stanford.edu/FIND/slac.html","Mon, 06 Sep 1993 00:00:00 GMT","https://swap.stanford.edu/","https://swap.stanford.edu/19930908000000/http://slacvm.slac.stanford.edu/FIND/slac.html"
+"http://vvork.com/","Mon, 06 Sep 1993 00:00:00 GMT","http://webenact.rhizome.org/vvork/","http://webenact.rhizome.org/vvork/20141006184357/http://www.vvork.com/"

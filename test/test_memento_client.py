@@ -44,6 +44,10 @@ specified_timegate_testdata = load_testdata(
     "test/specified_timegate_testdata.csv",
     [ "Input URI-R", "Accept-Datetime", "Input URI-G", "Expected URI-M" ] )
 
+specified_timegate_direct_timegate_query_testdata = load_testdata(
+    "test/specified_timegate_direct_timegate_query_testdata.csv",
+    [ "Input URI-R", "Accept-Datetime", "Input URI-G", "Expected URI-M" ] )
+
 native_timegate_testdata = load_testdata(
     "test/native_timegate_testdata.csv",
     [ "Input URI-R", "Accept-Datetime", "Expected URI-G" ] )
@@ -78,6 +82,15 @@ def test_get_memento_uri_specified_timegate(input_uri_r, input_datetime, input_t
     mc = MementoClient(timegate_uri=input_timegate, check_native_timegate=False)
 
     actual_uri_m = mc.get_memento_info(input_uri_r, input_datetime).get("mementos").get("closest").get("uri")[0]
+
+    assert expected_uri_m == actual_uri_m
+
+@pytest.mark.parametrize("input_uri_r,input_datetime,input_timegate,expected_uri_m", specified_timegate_direct_timegate_query_testdata)
+def test_get_memento_uri_specified_timegate_direct_timegate_query(input_uri_r, input_datetime, input_timegate, expected_uri_m):
+
+    mc = MementoClient(timegate_uri=input_timegate, check_native_timegate=False)
+
+    actual_uri_m = mc.get_memento_info(input_uri_r, input_datetime, include_uri_checks=False).get("mementos").get("closest").get("uri")[0]
 
     assert expected_uri_m == actual_uri_m
 
